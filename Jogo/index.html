@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Quest - Jogo de Plataforma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="canvas" width="800" height="600"></canvas>
+        
+        <div id="score">Pontos: 0 | Vidas: 3</div>
+        
+        <div id="instructions">
+            Use ← → para mover<br>
+            ESPAÇO para pular<br>
+            Para reniciar aperte F5<br>
+            Colete as estrelas!
+        </div>
+
+        <div id="difficultySelect">
+            <h2>Escolha a Dificuldade</h2>
+            <button class="difficultyBtn" data-difficulty="iniciante">
+                <span class="emoji">🌱</span>
+                <span class="level">Iniciante</span>
+                <span class="desc">Conceitos básicos</span>
+            </button>
+            <button class="difficultyBtn" data-difficulty="facil">
+                <span class="emoji">⭐</span>
+                <span class="level">Fácil</span>
+                <span class="desc">Conhecimentos essenciais</span>
+            </button>
+            <button class="difficultyBtn" data-difficulty="medio">
+                <span class="emoji">🔥</span>
+                <span class="level">Médio</span>
+                <span class="desc">Conceitos intermediários</span>
+            </button>
+            <button class="difficultyBtn" data-difficulty="dificil">
+                <span class="emoji">⚡</span>
+                <span class="level">Difícil</span>
+                <span class="desc">Conhecimentos avançados</span>
+            </button>
+            <button class="difficultyBtn" data-difficulty="expert">
+                <span class="emoji">👑</span>
+                <span class="level">Expert</span>
+                <span class="desc">Desafio máximo</span>
+            </button>
+        </div>
+
+        <div id="questionModal">
+            <div id="difficultyBadge"></div>
+            <div id="categoryBadge"></div>
+            <h2 id="questionText"></h2>
+            <div id="optionsContainer"></div>
+        </div>
+
+        <div id="gameOver">
+            <h2>Fim de Jogo!</h2>
+            <p id="finalScore"></p>
+            <p id="accuracyInfo"></p>
+            <button id="restartBtn">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
